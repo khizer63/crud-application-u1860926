@@ -63,14 +63,10 @@ class BoxerController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Boxer  $boxer
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Boxer $boxer)
     {
-        //
+        $boxer -> delete ();
+
+        return redirect () -> route ('boxers');
     }
 }

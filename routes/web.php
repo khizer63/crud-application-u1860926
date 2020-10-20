@@ -16,3 +16,6 @@ Route::get('/boxers',[BoxerController::class,'index']);
 
 Route::get('/boxers/{boxer}',[BoxerController::class,'show']);
 
+Route::get ('/boxers/{boxer}/', [BoxerController::class,'show']);
+Route::delete ('/boxers/{boxer}/', [BoxerController::class,'destroy']);
+
