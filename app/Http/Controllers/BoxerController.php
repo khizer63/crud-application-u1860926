@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 
 class BoxerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+       return view ('boxers.index',['boxers' => Boxer::all()]);
     }
 
     /**
@@ -38,15 +34,10 @@ class BoxerController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Boxer  $boxer
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Boxer $boxer)
     {
-        //
+        return view ('boxers.show', compact('boxer'));
     }
 
     /**
