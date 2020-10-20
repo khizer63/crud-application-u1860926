@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc5b6362-deb7-404d-a9f9-28b0e023711c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/boxers/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/boxers/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/boxers/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BoxerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BoxerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Boxer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Boxer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/boxers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/boxers/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +189,9 @@
       <workItem from="1603138603370" duration="119000" />
       <workItem from="1603183669325" duration="488000" />
       <workItem from="1603189571762" duration="696000" />
-      <workItem from="1603192240393" duration="1650000" />
+      <workItem from="1603192240393" duration="7965000" />
+      <workItem from="1603205055432" duration="1820000" />
+      <workItem from="1603220103666" duration="1219000" />
     </task>
     <servers />
   </component>
@@ -210,5 +209,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/welcome.blade.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

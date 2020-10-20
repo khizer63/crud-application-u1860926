@@ -6,11 +6,14 @@ use App\Models\Boxer;
 use Illuminate\Http\Request;
 
 class BoxerController extends Controller
+
 {
+    const BOXERS_ON_MAIN_PAGE = 6;
 
     public function index()
     {
-       return view ('boxers.index',['boxers' => Boxer::all()]);
+        $boxers = Boxer::query() -> orderByDesc('wins') -> paginate(self::BOXERS_ON_MAIN_PAGE);
+       return view ('boxers.index',['boxers' => $boxers]);
     }
 
     /**
@@ -20,15 +23,9 @@ class BoxerController extends Controller
      */
     public function create()
     {
-        //
+        return view ('boxers.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
@@ -48,7 +45,6 @@ class BoxerController extends Controller
      */
     public function edit(Boxer $boxer)
     {
-        //
     }
 
     /**
@@ -65,8 +61,5 @@ class BoxerController extends Controller
 
     public function destroy(Boxer $boxer)
     {
-        $boxer -> delete ();
-
-        return redirect () -> route ('boxers');
     }
 }
