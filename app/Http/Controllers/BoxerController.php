@@ -15,12 +15,6 @@ class BoxerController extends Controller
         $boxers = Boxer::query() -> orderByDesc('wins') -> paginate(self::BOXERS_ON_MAIN_PAGE);
        return view ('boxers.index',['boxers' => $boxers]);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view ('boxers.create');
@@ -28,7 +22,21 @@ class BoxerController extends Controller
 
     public function store(Request $request)
     {
-        //
+       request () -> validate([
+           'name' => 'required|min:2|max:32',
+           'division' => 'required|min:2|max:32',
+           'country' => 'required|min:2|max:32',
+           'wins' => 'numeric|min:0|max:32',
+           'losses' => 'numeric|min:0|max:32',
+           'draws' => 'numeric|min:0|max:32',
+       ]);
+
+       $attributes = $request -> all(
+           'name', 'division', 'country','wins','losses','draws');
+
+       $boxer = Boxer::create($attributes);
+
+       return redirect($boxer ->path);
     }
 
 
@@ -37,29 +45,29 @@ class BoxerController extends Controller
         return view ('boxers.show', compact('boxer'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Boxer  $boxer
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Boxer $boxer)
     {
+        return view('boxers.edit',compact('boxer'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Boxer  $boxer
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Boxer $boxer)
-    {
-        //
-    }
+    public function update(Request $request, Boxer $boxer){
+          $attributes =  request () -> validate([
+                'name' => 'required|min:2|max:32',
+                'division' => 'required|min:2|max:32',
+                'country' => 'required|min:2|max:32',
+                'wins' => 'numeric|min:0|max:32',
+                'losses' => 'numeric|min:0|max:32',
+                'draws' => 'numeric|min:0|max:32',
+            ]);
 
-    public function destroy(Boxer $boxer)
-    {
+          $boxer -> update($attributes);
+
+            return redirect() -> route('index');
+        }
+
+    public function destroy(Boxer $boxer){
+        $boxer -> delete();
+        return redirect() -> route('index');
     }
 }

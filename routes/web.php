@@ -10,15 +10,19 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('index');
+Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/boxers',[BoxerController::class,'index']);
+Route::get('/boxers',[BoxerController::class,'index'])->name('index');
 
 Route::get('/create',[BoxerController::class,'create']);
+Route::post('/boxers/',[BoxerController::class,'store']);
 
 
 Route::get('/boxers/{boxer}',[BoxerController::class,'show']);
 
-Route::get ('/boxers/{boxer}/', [BoxerController::class,'show']);
-Route::get ('/boxers_delete/{id}/', 'BoxerController::class@destroy');
+Route::get('/boxers/{boxer}/edit',[BoxerController::class,'edit']);
+Route::patch('/boxers/{boxer}',[BoxerController::class,'update']);
+
+Route::get ('/boxers/{boxer}', [BoxerController::class,'show']);
+Route::delete('/boxers/{boxer}', [BoxerController::class, 'destroy']);
 

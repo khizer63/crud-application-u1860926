@@ -1,15 +1,15 @@
 @extends ('layouts.app')
 
 
-
 @section ('content')
 
     <div class="text-4xl mb-8">
-        <h1>Add a Boxer</h1>
+        <h1>Update details for the following boxer: {{$boxer -> name}}</h1>
     </div>
 
-    <form method="post" action="/boxers">
+    <form method="post" action="{{$boxer->path}}">
 
+        @method('PATCH')
         @csrf
 
         <div class="flex flex-wrap">
@@ -128,11 +128,14 @@
 
         <div class="flex flex-wrap mt-8">
             <div class="w-full">
-                <button class="nav-button" type="submit"><i class="fas fa-paw mr-2"></i>Add Boxer</button>
+                <button class="nav-button" type="submit"><i class="fas fa-paw mr-2"></i>Update Boxer</button>
                 <a href="/boxers">
                     <button class="nav-button" type="button"><i class="fas fa-paw mr-2"></i>Cancel</button>
                 </a>
+                </a>
             </div>
+        </div>
+    </form>
         </div>
 
     </form>

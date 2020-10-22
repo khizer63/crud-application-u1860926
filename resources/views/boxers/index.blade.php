@@ -30,10 +30,12 @@
             <ul>
                 @foreach($boxers as $b)
                     <li>
-                        {{$b -> name}} - {{$b -> division}} : <a href={{$b -> path}}">Boxer Details</a>
+                        <p> - {{$b -> name}}</p>
+                        <p> Current Division: {{$b -> division}}</p>
+                        <p> <strong><a href="{{$b -> path}}">Further Details</a></strong></p>
+
                     </li>
                 @endforeach
-
             </ul>
                 </div>
             </section>
