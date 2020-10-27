@@ -20,8 +20,8 @@ Route::post('/boxers/',[BoxerController::class,'store']);
 
 Route::get('/boxers/{boxer}',[BoxerController::class,'show']);
 
-Route::get('/boxers/{boxer}/edit',[BoxerController::class,'edit']);
-Route::patch('/boxers/{boxer}',[BoxerController::class,'update']);
+Route::get('/boxers/{boxer}/edit',[BoxerController::class,'edit'])->name('boxers.edit');
+Route::patch('/boxers/{boxer}/',[BoxerController::class,'update']);
 
 Route::get ('/boxers/{boxer}', [BoxerController::class,'show']);
 Route::delete('/boxers/{boxer}', [BoxerController::class, 'destroy']);

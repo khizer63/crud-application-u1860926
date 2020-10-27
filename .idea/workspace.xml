@@ -21,9 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cc5b6362-deb7-404d-a9f9-28b0e023711c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BoxerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BoxerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Boxer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Boxer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/boxers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/boxers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/boxers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/boxers/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/boxers/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -196,6 +199,8 @@
       <workItem from="1603360618405" duration="5994000" />
       <workItem from="1603368795297" duration="3000" />
       <workItem from="1603378751879" duration="3849000" />
+      <workItem from="1603385087434" duration="4317000" />
+      <workItem from="1603746059395" duration="2624000" />
     </task>
     <servers />
   </component>

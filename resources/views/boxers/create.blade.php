@@ -120,7 +120,7 @@
 
         <div class="flex flex-wrap">
             <div class="w-full">
-                <label class="block" for="description">Details</label>
+                <label class="block" for="notes">Details</label>
                 <textarea class="block w-8/12" rows="5"
                           name="notes" placeholder="Insert information"></textarea>
             </div>
@@ -134,7 +134,6 @@
                 </a>
             </div>
         </div>
-
     </form>
 
 @endsection

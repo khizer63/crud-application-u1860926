@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BoxerController extends Controller
 
 {
-    const BOXERS_ON_MAIN_PAGE = 6;
+    const BOXERS_ON_MAIN_PAGE = 30;
 
     public function index()
     {
@@ -32,7 +32,11 @@ class BoxerController extends Controller
        ]);
 
        $attributes = $request -> all(
-           'name', 'division', 'country','wins','losses','draws');
+           'name',
+                'division',
+                'country',
+                'wins','losses','draws',
+                'notes');
 
        $boxer = Boxer::create($attributes);
 

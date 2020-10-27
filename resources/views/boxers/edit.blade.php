@@ -19,7 +19,7 @@
                 </label>
 
                 <input class="block w-2/5 @error ('name') border border-red-500 @enderror"
-                       type="text" name="name" data-lpignore="true" autocomplete="off" placeholder="e.g. Bob" />
+                       type="text" name="name" data-lpignore="true" autocomplete="off" value="{{$boxer -> name}}" />
 
                 @error ('name')
                 <div class="alert-message">
@@ -35,7 +35,7 @@
                 <label class="block" for="division">Division</label>
                 <input class="block w-4/5 @error ('division') border border-red-500 @enderror"
                        type="text" name="division" data-lpignore="true"
-                       autocomplete="off" placeholder="e.g. Middleweight" />
+                       autocomplete="off" value="{{$boxer -> division}}" />
 
                 @error ('division')
                 <div class="alert-message">
@@ -51,7 +51,7 @@
                 </label>
                 <input class="block w-4/5 @error ('country') border border-red-500 @enderror"
                        type="text" name="country" data-lpignore="true"
-                       autocomplete="off" placeholder="e.g. United Kingdom" />
+                       autocomplete="off" value="{{$boxer -> country}}" />
 
                 @error ('country')
                 <div class="alert-message">
@@ -69,7 +69,7 @@
                 </label>
 
                 <input class="block w-2/5 @error ('wins') border border-red-500 @enderror"
-                       type="number" name="wins" data-lpignore="true" autocomplete="off" placeholder="e.g. 20" />
+                       type="number" name="wins" data-lpignore="true" autocomplete="off" value="{{$boxer -> wins}}" />
 
                 @error ('wins')
                 <div class="alert-message">
@@ -87,7 +87,7 @@
                 </label>
 
                 <input class="block w-2/5 @error ('draws') border border-red-500 @enderror"
-                       type="number" name="draws" data-lpignore="true" autocomplete="off" placeholder="e.g. 20" />
+                       type="number" name="draws" data-lpignore="true" autocomplete="off" value="{{$boxer -> draws}}" />
 
                 @error ('draws')
                 <div class="alert-message">
@@ -105,7 +105,7 @@
                 </label>
 
                 <input class="block w-2/5 @error ('losses') border border-red-500 @enderror"
-                       type="number" name="losses" data-lpignore="true" autocomplete="off" placeholder="e.g. 20" />
+                       type="number" name="losses" data-lpignore="true" autocomplete="off" value="{{$boxer -> losses}}" />
 
                 @error ('losses')
                 <div class="alert-message">
@@ -120,7 +120,7 @@
 
         <div class="flex flex-wrap">
             <div class="w-full">
-                <label class="block" for="description">Details</label>
+                <label class="block" for="notes">Details</label>
                 <textarea class="block w-8/12" rows="5"
                           name="notes" placeholder="Insert information"></textarea>
             </div>
@@ -132,12 +132,7 @@
                 <a href="/boxers">
                     <button class="nav-button" type="button"><i class="fas fa-paw mr-2"></i>Cancel</button>
                 </a>
-                </a>
             </div>
         </div>
     </form>
-        </div>
-
-    </form>
-
 @endsection

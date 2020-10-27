@@ -14,12 +14,10 @@ class Boxer extends Model
 
     public function getPathAttribute () {
         return $this -> path();
-
     }
 
     public function path () {
         return "/boxers/" . $this -> id;
-
     }
 
 }
